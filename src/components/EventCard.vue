@@ -18,18 +18,19 @@
         </div>
       </div>
       <a class="card__button text-uppercase">Sold out</a>
-      <img
-        src="../assets/event-icon.svg"
-        class="card__button__sm"
-        alt=""
-        srcset=""
-      />
+      <img :src="img" class="card__button__sm" alt="" srcset="" />
     </div>
   </div>
 </template>
 
 <script>
+import text from "../assets/event-icon.svg";
 export default {
+  data() {
+    return {
+      img: text,
+    };
+  },
   setup() {
     return {};
   },
