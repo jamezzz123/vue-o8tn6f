@@ -43,6 +43,19 @@ export default {
   box-sizing: border-box;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+}
+
 .grip {
   display: grid;
   gap: 32px;
