@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <SearchBar></SearchBar>
+  <my-header></my-header>
+
+  <div class="container-fluid">
+    <h1 class="text-uppercase">Event</h1>
+    <div class="grip container-fluid">
+      <EventCard></EventCard>
+      <EventCard></EventCard>
+      <EventCard></EventCard>
+      <EventCard></EventCard>
+      <EventCard></EventCard>
+      <EventCard></EventCard>
+      <EventCard></EventCard>
+    </div>
+  </div>
+
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import MyHeader from "./components/SearchBar.vue";
+import SearchBar from "./components/MyHeader.vue";
+import EventCard from "./components/EventCard.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    MyHeader,
+    SearchBar,
+    EventCard,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Almarai", sans-serif;
+  box-sizing: border-box;
+}
+
+.grip {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 780px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>

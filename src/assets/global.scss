@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Almarai", sans-serif;
+  box-sizing: border-box;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+}
+
+// body {
+//   @media (max-width: 780px) {
+//     overflow: hidden;
+//   }
+// }
