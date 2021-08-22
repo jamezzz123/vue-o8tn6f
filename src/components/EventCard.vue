@@ -18,17 +18,23 @@
         </div>
       </div>
       <a class="card__button text-uppercase">Sold out</a>
-      <img :src="img" class="card__button__sm" alt="" srcset="" />
+      <a href="" class="card__button__sm"
+        ><eventIcon class="card__button__sm"></eventIcon
+      ></a>
+      <!-- <img :src="img" class="card__button__sm" alt="" srcset="" /> -->
     </div>
   </div>
 </template>
 
 <script>
-import text from "../assets/event-icon.svg";
+import eventIcon from "./EventIcon";
 export default {
+  components: {
+    eventIcon,
+  },
   data() {
     return {
-      img: text,
+      // img: text,
     };
   },
   setup() {
@@ -125,11 +131,13 @@ export default {
     font-weight: 600;
     padding: 5px;
     text-align: center;
+    align-self: center;
 
     @media (max-width: 780px) {
       display: none;
     }
     &__sm {
+      align-self: center;
       display: none;
       @media (max-width: 780px) {
         display: block;
