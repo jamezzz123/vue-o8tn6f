@@ -107,7 +107,7 @@ export default {
   }
   &__item {
     padding: 2px 10px;
-    &__mb {
+    @media (max-width: 780px) {
       padding: 12px;
     }
 
