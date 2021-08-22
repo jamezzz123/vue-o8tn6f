@@ -19,7 +19,7 @@
       </div>
       <a class="card__button text-uppercase">Sold out</a>
       <img
-        src="@/assets/event-icon.svg"
+        src="../assets/event-icon.svg"
         class="card__button__sm"
         alt=""
         srcset=""
