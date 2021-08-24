@@ -8,19 +8,29 @@
     <div class="card__body">
       <div class="card__content">
         <div class="card__info">
-          <h6 class="card__content__title">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          </h6>
+          <h6 class="card__content__title">{{ eventDetails.title }}.</h6>
           <div class="card__content__description">
-            <p>Location</p>
-            <p>Ticket Available <span>4</span></p>
+            <p>{{ eventDetails.date }}</p>
+            <p>
+              Ticket Available <span>{{ eventDetails.ticket_available }}</span>
+            </p>
           </div>
         </div>
       </div>
-      <a class="card__button text-uppercase">Sold out</a>
-      <a href="" class="card__button__sm"
-        ><eventIcon class="card__button__sm"></eventIcon
-      ></a>
+      <div class="card__button">
+        <a
+          class="card__button__link text-uppercase"
+          :class="{ 'card__button__link--disabled': eventDetails.sold_out }"
+          style="width: 100%"
+          >{{ eventDetails.sold_out ? "SOLD OUT" : "BOOK EVENT" }}</a
+        >
+        <a
+          href=""
+          class="card__button__sm"
+          :class="{ 'card__button__link--disabled': eventDetails.sold_out }"
+          ><eventIcon class="card__button__link__sm"></eventIcon
+        ></a>
+      </div>
       <!-- <img :src="img" class="card__button__sm" alt="" srcset="" /> -->
     </div>
   </div>
@@ -31,6 +41,12 @@ import eventIcon from "./EventIcon";
 export default {
   components: {
     eventIcon,
+  },
+  props: {
+    eventDetails: {
+      type: Object,
+      required: true,
+    },
   },
   data() {
     return {
@@ -65,6 +81,9 @@ export default {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 
     @media (max-width: 780px) {
       flex-direction: row;
@@ -93,10 +112,9 @@ export default {
     // display: flex;
     // flex-direction: column;
     padding: 10px;
-    // @media (max-width: 780px) {
-    //   flex-direction: row;
-    // }
-
+    @media (max-width: 780px) {
+      width: 90%;
+    }
     &__title {
       font-size: 22px;
       text-align: center;
@@ -123,24 +141,35 @@ export default {
     }
   }
   &__button {
-    border: 2px solid #fc732f;
-    border-radius: 4px;
-    width: 100%;
-    background: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 5px;
-    text-align: center;
     align-self: center;
-
+    width: 100%;
     @media (max-width: 780px) {
-      display: none;
+      width: auto;
     }
-    &__sm {
+    &__link {
+      border: 2px solid #fc732f;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 5px;
+      text-align: center;
       align-self: center;
-      display: none;
+      display: block;
+
       @media (max-width: 780px) {
-        display: block;
+        display: none;
+      }
+      &__sm {
+        align-self: center;
+        display: none;
+        @media (max-width: 780px) {
+          display: block;
+        }
+      }
+      &--disabled {
+        border-color: #e5e5e5;
       }
     }
   }

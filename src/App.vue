@@ -3,15 +3,13 @@
   <my-header></my-header>
 
   <div class="container-fluid">
-    <h1 class="text-uppercase">Event</h1>
+    <h1 class="text-uppercase">Event ({{ events.length }})</h1>
     <div class="grip container-fluid">
-      <EventCard></EventCard>
-      <EventCard></EventCard>
-      <EventCard></EventCard>
-      <EventCard></EventCard>
-      <EventCard></EventCard>
-      <EventCard></EventCard>
-      <EventCard></EventCard>
+      <EventCard
+        v-for="(item, index) in events"
+        :key="index"
+        :eventDetails="item"
+      ></EventCard>
     </div>
   </div>
 
@@ -24,9 +22,15 @@
 import MyHeader from "./components/SearchBar.vue";
 import SearchBar from "./components/MyHeader.vue";
 import EventCard from "./components/EventCard.vue";
+import data from "@/assets/data.json";
 
 export default {
   name: "App",
+  data() {
+    return {
+      events: data,
+    };
+  },
   components: {
     MyHeader,
     SearchBar,
