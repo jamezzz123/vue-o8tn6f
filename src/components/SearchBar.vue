@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search__wrapper container-fluid">
-      <input type="text" class="search__input" />
+      <input type="text" value="" class="search__input" />
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {};
     border: 1px solid #d5d5d5;
     border-radius: 4px;
     width: 700px;
-    padding: 5px;
+    padding: 10px;
   }
 }
 </style>

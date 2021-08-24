@@ -122,7 +122,7 @@ export default {
       margin-bottom: 15px;
       line-height: 1;
       font-weight: bold;
-
+      text-transform: capitalize;
       @media (max-width: 780px) {
         text-align: left;
         font-size: 20px;
