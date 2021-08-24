@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import SearchBar from "@/components/SearchBar.vue";
-import MyHeader from "@/components/MyHeader.vue";
-import EventCard from "@/components/EventCard.vue";
-import data from "@/assets/data.json";
+import SearchBar from "../components/SearchBar.vue";
+import MyHeader from "../components/MyHeader.vue";
+import EventCard from "../components/EventCard.vue";
+import data from "../assets/data.json";
 
 export default {
   name: "App",

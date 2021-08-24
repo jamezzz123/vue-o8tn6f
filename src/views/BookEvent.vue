@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import data from "@/assets/data.json";
+import data from "../assets/data.json";
 export default {
   data() {
     return {
