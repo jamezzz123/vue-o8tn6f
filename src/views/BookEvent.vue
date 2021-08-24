@@ -3,9 +3,9 @@
     <div class="card">
       <div class="card__details">
         <div class="card__title">
-          <h2>RGD Design Thinkers</h2>
-          <p>21 Sep 2020</p>
-          <p>21 Sep 2020</p>
+          <h2>{{ eventDetail.title }}</h2>
+          <p>Ticket Available {{ eventDetail.ticket_available }}</p>
+          <p>{{ eventDetail.date }}</p>
         </div>
         <br />
         <div class="card__form">
@@ -94,9 +94,11 @@
 </template>
 
 <script>
+import data from "@/assets/data.json";
 export default {
   data() {
     return {
+      eventDetail: {},
       errors: [],
       attandee: {
         name: "",
@@ -144,6 +146,10 @@ export default {
     addAttandee() {
       this.attandee.attandee.push({ firstName: "" });
     },
+  },
+  mounted() {
+    this.eventDetail = data.find((item) => item.id == this.$route.params.id);
+    console.log(this.eventDetail);
   },
 };
 </script>

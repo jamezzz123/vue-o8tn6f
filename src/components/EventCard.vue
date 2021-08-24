@@ -18,11 +18,12 @@
         </div>
       </div>
       <div class="card__button">
-        <a
+        <router-link
           class="card__button__link text-uppercase"
           :class="{ 'card__button__link--disabled': eventDetails.sold_out }"
           style="width: 100%"
-          >{{ eventDetails.sold_out ? "SOLD OUT" : "BOOK EVENT" }}</a
+          :to="{ name: 'book', params: { id: eventDetails.id } }"
+          >{{ eventDetails.sold_out ? "SOLD OUT" : "BOOK EVENT" }}</router-link
         >
         <a
           href=""
@@ -151,6 +152,8 @@ export default {
       border-radius: 4px;
       width: 100%;
       background: #fff;
+      text-decoration: none;
+      color: #fc732f;
       font-size: 20px;
       font-weight: 600;
       padding: 5px;
@@ -170,6 +173,7 @@ export default {
       }
       &--disabled {
         border-color: #e5e5e5;
+        color: #e5e5e5;
       }
     }
   }

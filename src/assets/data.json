@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "understanding color theory The color wheel and",
     "date": "21 sep,2020",
     "ticket_available": "N/A",
@@ -7,6 +8,7 @@
     "img_src": "https://source.unsplash.com/collection/9537244/200x200"
   },
   {
+    "id": 2,
     "title": "RGD Design Thinkers",
     "date": "20 sep,2021",
     "ticket_available": "N/A",
@@ -14,6 +16,7 @@
     "img_src": "https://source.unsplash.com/collection/9537244/200x200"
   },
   {
+    "id": 3,
     "title": "What Design can do",
     "date": "21 sep,2020",
     "ticket_available": 20,
@@ -21,6 +24,7 @@
     "img_src": "https://source.unsplash.com/collection/9537244/200x200"
   },
   {
+    "id": 4,
     "title": "Path UX camp",
     "date": "21 sep,2020",
     "ticket_available": 20,
@@ -28,6 +32,7 @@
     "img_src": "https://source.unsplash.com/collection/9537244/200x200"
   },
   {
+    "id": 5,
     "title": "Sofia Design",
     "date": "21 Jan,2020",
     "ticket_available": 20,
@@ -35,6 +40,7 @@
     "img_src": "https://source.unsplash.com/collection/9537244/200x200"
   },
   {
+    "id": 6,
     "title": "Design Indaba Conference",
     "date": "21 jun,2020",
     "ticket_available": 20,
@@ -42,6 +48,7 @@
     "img_src": "https://source.unsplash.com/collection/9537244/200x200"
   },
   {
+    "id": 7,
     "title": "Design Indaba Conference",
     "date": "21 jun,2020",
     "ticket_available": "N/a",
