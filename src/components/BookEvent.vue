@@ -36,6 +36,8 @@
               name="name"
               placeholder="Name"
             />
+            <input type="button" value="Book" class="button" />
+            <input type="button" value="close" class="button--inverse" />
           </form>
         </div>
       </div>
@@ -65,7 +67,7 @@ export default {};
   color: white;
   padding: 10px;
 
-  &__inverse {
+  &--inverse {
     border-color: white;
     color: #fc732f;
   }
