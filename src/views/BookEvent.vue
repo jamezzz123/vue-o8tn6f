@@ -67,7 +67,7 @@
               </div>
               <div style="display: flex; flex-direction: row-reverse">
                 <button
-                  style="width: 20%"
+                  style="width: 30%"
                   class="button button--noborder"
                   @click.prevent="addAttandee()"
                 >
